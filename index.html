@@ -12,6 +12,7 @@
 
     <title>Patient Agreement for Wonder Bread - MotionMD Admin</title>
     <link rel="stylesheet" media="screen" href="style.css" />
+    <link rel="stylesheet" href="./assets/css/modal_style.css">
 </head>
 
 <body>
@@ -131,90 +132,110 @@
     </div>
 
 
-        <!--Products-->
-        <div class="container" style="margin-bottom: 25px">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Products</h3>
-                            <div class="active-cyan-4 mb-4">
-
-
-
-                                <div class="form-inline">
-                                    <input class="form-control w-75">
-                                    <button class="btn btn-primary mr-2">Search</button>
-                                    <button class="btn btn-primary">Scan</button>
-                                </div>
+    <!--Products-->
+    <div class="container" style="margin-bottom: 25px">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Products</h3>
+                        <div class="active-cyan-4 mb-4">
+                            <div class="form-inline">
+                                <input class="form-control w-75" id="product-input">
+                                <button class="btn btn-primary mr-2">Search</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#scan-modal" id="open-scanner">
+                                    Scan
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!--Payment Methods-->
-        <div class="container" style="margin-bottom: 25px">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Payment Methods</h3>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+    <!--Payment Methods-->
+    <div class="container" style="margin-bottom: 25px">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Payment Methods</h3>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                        </p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Attachments-->
+    <div class="container" style="margin-bottom: 25px">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Attachments</h3>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Notes-->
+    <div class="container" style="margin-bottom: 25px">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Notes</h3>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal -->
+    <div class="row">
+        <div class="col-12">
+            <div class="modal fade" id="scan-modal" tabindex="-1" role="dialog" aria-labelledby="scan-modal-title"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body" id="video-container">
+                            <video class="dbrScanner-video" playsinline="true"></video>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!--Attachments-->
-        <div class="container" style="margin-bottom: 25px">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Attachments</h3>
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!--Notes-->
-        <div class="container" style="margin-bottom: 25px">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Notes</h3>
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
 
 
 
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.6.0/dist/dbr.js"
+        data-productKeys="t0077xQAAAEQAhtbUqqzt3zr77O1f6IbRnQn1x1dUGgVOvLTj/bowJcgIus5PBIJp8PLzx/a+1WgbjOAPPOMKFZQGxJlud6OK0FB9AGbhKnk="></script>
+    <script src="assets/js/app.js"></script>
 
-
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
 </body>
 
 </html>
