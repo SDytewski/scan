@@ -5,21 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Patient Agreement for Wonder Bread - MotionMD Admin</title>
     <link rel="stylesheet" media="screen" href="style.css" />
+    <link rel="stylesheet" href="./assets/css/modal_style.css">
 </head>
 
 <body>
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-12" id="top-bar">
+            <div class="col-sm-10" id="top-bar">
                 <p> Patient Agreements / Wonder Bread</p>
+            </div>
+            <div class="col-sm-2">
+                <button id="clear-local-storage" class="btn btn-primary">Clear Storage</button>
             </div>
         </div>
 
@@ -131,18 +134,18 @@
                             <h3 class="card-title">Products</h3>
                         </div>
                         <div class="active-cyan-4 mb-4">
-
-
-
                             <div class="form-inline">
-                                <input class="form-control w-75">
-                                <button class="btn btn-primary mr-2">Search</button>
-                                <button class="btn btn-primary">Scan</button>
+                                <input class="form-control w-75" id="product-input">
+                                <button class="btn btn-primary mr-2" id="product-search">Search</button>
+                                <a type="button" class="btn btn-primary" id="open-scanner" href="./scanner.html">
+                                    Scan
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
 
 
@@ -152,44 +155,34 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-body">
-
-
-
-
-
                         <div class="text-muted">
                             <h3 class="card-title" class="text-muted">Payment Methods</h3>
                         </div>
                         <div class="card-group">
                             <div class="card">
-
                                 <div class="card-body">
                                     <h5 class="card-title">Primary</h5>
                                     <p class="card-text">Self Pay (Self Pay)</p>
                                 </div>
-
                             </div>
                             <div class="card">
-
                                 <div class="card-body">
                                     <h5 class="card-title">Secondary</h5>
                                     <p class="card-text">Medicare(Medicare)</p>
                                 </div>
-
                             </div>
                             <div class="card">
-
                                 <div class="card-body">
                                     <h5 class="card-title">Tertiary</h5>
                                     <p class="card-text">BlueCross(Commercial)</p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
 
         <!--Billing Requirements-->
 
@@ -198,78 +191,59 @@
             <div class="col-lg-4 padding-0">
                 <div class="card-group">
                     <div class="card">
-                        <hr/>
+                        <hr />
                         <img class="card-img-top" src="billing.jpg" alt="Card image cap">
-
-
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 padding-0">
                 <div class="card border-0">
-                    <hr/>
+                    <hr />
                     <img class="card-img-top" src="patient.jpg" alt="Card image cap">
-
-
                 </div>
             </div>
             <div class="col-lg-4 padding-0">
                 <div class="card border-0">
-                    <hr/>
+                    <hr />
                     <img class="card-img-top" src="provider.jpg" alt="Card image cap">
-
                 </div>
             </div>
         </div>
-    
+
+        <!--Attachments-->
+
+        <div class="row mb-5">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="text-muted">
+                            <h3 class="card-title" class="text-muted">Attachments</h3>
+                        </div>
 
 
-
-
-
-
-
-
-
-    <!--Attachments-->
-
-    <div class="row mb-5">
-        <div class="col-sm-12">
-            <div class="card">
-                <div class="card-body">
-                    <div class="text-muted">
-                        <h3 class="card-title" class="text-muted">Attachments</h3>
                     </div>
-
-
                 </div>
             </div>
         </div>
-    </div>
 
 
 
-    <!--Notes-->
+        <!--Notes-->
 
-    <div class="row mb-5">
-        <div class="col-sm-12">
-            <div class="card">
-                <div class="card-body">
-                    <div class="text-muted">
-                        <h3 class="card-title" class="text-muted">Notes</h3>
+        <div class="row mb-5">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="text-muted">
+                            <h3 class="card-title" class="text-muted">Notes</h3>
+                        </div>
+
+
                     </div>
-
-
                 </div>
             </div>
         </div>
     </div>
-
-
-
-    </div>
-
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -280,6 +254,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
+
 </body>
 
 </html>
