@@ -1,0 +1,24 @@
+.hide {
+
+    list-style-type:none;
+
+}
+
+
+#top-bar {
+background-color:#e9ecef;
+
+}
+
+.btn-primary {
+background-color: #19B798;
+border-color: #19B798
+
+}
+
+.active-text {
+color: #19B798;
+font-weight: 500;
+
+
+}
