@@ -22,3 +22,19 @@ font-weight: 500;
 
 
 }
+
+.card-img-top {
+
+    width: 100%;
+}
+
+.card {
+
+    height: 100%;
+}
+
+.padding-0 {
+padding-right: 0;
+padding-left: 0;
+
+}
