@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -19,12 +18,12 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-12" id="top-bar">
-
-
+            <div class="col-sm-10" id="top-bar">
                 <p> Patient Agreements / Wonder Bread</p>
-
             </div>
+            <div class="col-sm-2">
+                <button id="clear-local-storage" class="btn btn-primary">Clear Storage</button>
+            </div>   
         </div>
     </div>
 
@@ -142,11 +141,10 @@
                         <div class="active-cyan-4 mb-4">
                             <div class="form-inline">
                                 <input class="form-control w-75" id="product-input">
-                                <button class="btn btn-primary mr-2">Search</button>
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#scan-modal" id="open-scanner">
+                                <button class="btn btn-primary mr-2" id="product-search">Search</button>
+                                <a type="button" class="btn btn-primary" id="open-scanner" href="./scanner.html">
                                     Scan
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -202,27 +200,7 @@
         </div>
     </div>
 
-
-
-    <!-- Modal -->
-    <div class="row">
-        <div class="col-12">
-            <div class="modal fade" id="scan-modal" tabindex="-1" role="dialog" aria-labelledby="scan-modal-title"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body" id="video-container">
-                            <video class="dbrScanner-video" playsinline="true"></video>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
+ 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -232,8 +210,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.6.0/dist/dbr.js"
-        data-productKeys="t0077xQAAAEQAhtbUqqzt3zr77O1f6IbRnQn1x1dUGgVOvLTj/bowJcgIus5PBIJp8PLzx/a+1WgbjOAPPOMKFZQGxJlud6OK0FB9AGbhKnk="></script>
     <script src="assets/js/app.js"></script>
 
 </body>
